@@ -1,0 +1,24 @@
+sudo: false
+language: java
+jdk:
+  - openjdk6
+  - openjdk7
+  - oraclejdk7
+  - oraclejdk8
+before_install:
+  - git config --global user.name "LexBot"
+  - git config --global user.email "jamie.mansfield.jm@outlook.com"
+notifications:
+  email: false
+env:
+  global:
+    - LEX_DEPLOY=https://github.com/LexBot/Deploy.git DEPLOY_ROOT=/tmp/lex/deploy
+    - secure: "LVpw7YpFqyMg4ugaDomu7j6J4mkqkIr+IH7LWklOC68vbhI1vFY2Uyiqf6SteN2Mz03ZZHpmPDZTHauQIVAXV55TlGQMk4j/Y+fpL62WLknqfKkG0F1OFVgH5ZN1xbT6neV45w1L8s9KxUGRTyqR3ec6IQLq28c4UIaRisadwwg="
+after_success:
+  - git clone $LEX_DEPLOY $DEPLOY_ROOT && $DEPLOY_ROOT/maven_repo "mvn source:jar javadoc:jar deploy"
+notifications:
+  irc:
+    channels:
+      - "irc.esper.net#lexteam"
+    on_success: change
+    on_failure: always

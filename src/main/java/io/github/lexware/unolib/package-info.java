@@ -14,15 +14,3 @@
  * limitations under the License.
  */
 package io.github.lexware.unolib;
-
-public class Wrapper<T> {
-    private final T handle;
-
-    public Wrapper(final T handle) {
-        this.handle = handle;
-    }
-
-    protected final T getHandle() {
-        return handle;
-    }
-}
