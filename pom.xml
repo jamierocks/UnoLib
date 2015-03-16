@@ -22,7 +22,7 @@
             <id>jmansfield</id>
             <name>Jamie Mansfield</name>
             <email>malgm@lapis.blue</email>
-            <url>https://github.com/lexware</url>
+            <url>https://github.com/jamierocks</url>
             <timezone>GMT/England</timezone>
             <roles>
                 <role>Project lead</role>
@@ -32,9 +32,9 @@
     </developers>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:lexware/UnoLib.git</developerConnection>
-        <connection>scm:git:git://github.com/lexware/UnoLibgit</connection>
-        <url>https://github.com/lexware/UnoLib/tree/master</url>
+        <developerConnection>scm:git:git@github.com:jamierocks/UnoLib.git</developerConnection>
+        <connection>scm:git:git://github.com/jamierocks/UnoLib.git</connection>
+        <url>https://github.com/jamierocks/UnoLib/tree/master</url>
     </scm>
 
     <build>
