@@ -22,7 +22,7 @@ public class Wrapper<T> {
         this.handle = handle;
     }
 
-    protected final T getHandle() {
-        return handle;
+    protected T getHandle() {
+        return this.handle;
     }
 }
